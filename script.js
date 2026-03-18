@@ -36,7 +36,7 @@ function captureImage() {
 // Send to AI (Replace with real API)
 async function sendToAI(query, image) {
 
-    // 🔥 DEMO LOGIC (replace with OpenAI later)
+    //  DEMO LOGIC (replace with OpenAI later)
     if (query.toLowerCase().includes("road")) {
         return "I see a road slightly to your left.";
     }
