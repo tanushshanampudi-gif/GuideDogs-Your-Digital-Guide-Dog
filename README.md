@@ -8,19 +8,19 @@ Visually impaired individuals face challenges in understanding their surrounding
 GuideDogs provides a simple, voice-based interface where users can ask questions, and the AI analyzes real-time camera input to generate intelligent responses delivered through speech.
 
 ##  Features
-- 🎤 Voice-based interaction (Speech-to-Text)
+- 🎤 Voice-based interaction (Speech-to-speech)
 - 📸 Real-time camera input
 - 🤖 AI-based scene understanding
-- 🔊 Voice responses (Text-to-Speech using Murf AI)
+- 🔊 Voice responses (powered by Murf AI)
 - 📄 Text reading (OCR simulation)
 - 📍 Object detection (simulation)
+- 🎥 Camera control (Voice-based ON/OFF)
   
 ##  Tech Stack
 - HTML, CSS, JavaScript
 - Web Speech API (Speech Recognition)
 - Camera API (getUserMedia)
-- (Future) OpenAI / Gemini Vision API
-- (Future) Murf AI Text-to-Speech
+- Murf AI API (Speech-to-Speech)
 
 ##  Demo Commands
 Try saying:
@@ -29,20 +29,22 @@ Try saying:
 - “Where is the road?”
 - “What is in my hand?”
 - “Read this receipt”
-
+- "Turn camera on"
+- "Turn camera off"
+  
 ##  How It Works
 1. User speaks a question  
 2. System converts speech → text  
 3. Camera captures the environment  
 4. AI processes image + question  
 5. Generates response  
-6. Response is spoken back to user  
+6. Response is spoken back to user using Murf Ai
 
 ##  Future Improvements
 - Real AI vision integration (no simulation)
-- Full Murf AI voice integration
-- Mobile app version
-- Navigation assistance
+- Improved Hindi and multilingual support
+- Mobile application version
+- Navigation assistance (real-time guidance)
 
 ##  Impact
-GuideDogs empowers visually impaired individuals to interact with the world more independently, confidently, and efficiently using voice and AI.
+GuideDogs demonstrates a fully voice-first AI assistant designed specifically for visually impaired users, minimizing screen dependency.
