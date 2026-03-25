@@ -51,8 +51,38 @@ async function sendToAI(query, image) {
 }
 
 // Speak response
-function speak(text) {
-    const speech = new SpeechSynthesisUtterance(text);
-    speech.lang = "en-US";
-    window.speechSynthesis.speak(speech);
+const API_KEY = "ap2_fdb42336-55ce-4d8f-b86d-4866f4f5184e"; 
+
+async function speak(text) {
+    try {
+        const response = await fetch("https://api.murf.ai/v1/speech/generate", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "api-key": API_KEY
+            },
+            body: JSON.stringify({
+                text: text,
+                voiceId: "en-US-natalie"
+            })
+        });
+
+        const data = await response.json();
+
+        // Play Murf audio
+        if (data.audioFile) {
+            const audio = new Audio(data.audioFile);
+            audio.play();
+        } else {
+            throw new Error("No audio returned");
+        }
+
+    } catch (error) {
+        console.error("Murf failed, using fallback:", error);
+
+        // 🔁 fallback (VERY IMPORTANT)
+        const speech = new SpeechSynthesisUtterance(text);
+        speech.lang = "en-US";
+        window.speechSynthesis.speak(speech);
+    }
 }
