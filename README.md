@@ -15,7 +15,8 @@ GuideDogs provides a simple, voice-based interface where users can ask questions
 - 📄 Text reading (OCR simulation)
 - 📍 Object detection (simulation)
 - 🎥 Camera control (Voice-based ON/OFF)
-  
+- 🌐 Multi-language support (English + Hindi)
+    
 ##  Tech Stack
 - HTML, CSS, JavaScript
 - Web Speech API (Speech Recognition)
@@ -31,7 +32,10 @@ Try saying:
 - “Read this receipt”
 - "Turn camera on"
 - "Turn camera off"
-  
+- "Switch to Hindi"
+- "Switch to English"
+- "Yeh kya hai?"
+- 
 ##  How It Works
 1. User speaks a question  
 2. System converts speech → text  
