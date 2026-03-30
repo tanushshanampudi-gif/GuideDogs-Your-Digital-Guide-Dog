@@ -51,7 +51,7 @@ async function sendToAI(query, image) {
 }
 
 // Speak response
-const API_KEY = "ap2_fdb42336-55ce-4d8f-b86d-4866f4f5184e"; 
+const API_KEY = "your_api_key"; 
 
 async function speak(text) {
     try {
